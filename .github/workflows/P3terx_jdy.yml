@@ -9,11 +9,11 @@
 name: P3TERX_JDY-1
 
 on:
-   release:
-     types: [published]
-#   push:
-#     branches:
-#       - master
+#   release:
+#     types: [published]
+   push:
+     branches:
+       - master
 #     paths:
 #       - 'jdy.config'
 #  schedule:
