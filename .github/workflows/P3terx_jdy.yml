@@ -6,16 +6,16 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P13
+name: P3TERX_JDY-1
 
 on:
-  release:
-    types: [published]
-#   push:
-#    branches:
-#      - master
+#   release:
+#     types: [published]
+   push:
+     branches:
+       - master
 #     paths:
-#       - 'k2p.config'
+#       - 'jdy.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -45,7 +45,7 @@ jobs:
         sudo -E apt-get -qq clean
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
+        
     - name: Clone source code
       env:
         REPO_URL: https://github.com/coolsnowwolf/lede
@@ -60,14 +60,14 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: 'k2p.config'
+        CONFIG_FILE: 'jdy.config'
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./customizek2p.sh && ./customizek2p.sh
+        chmod +x ./diy.sh && ./diy.sh
         cd openwrt
         make defconfig
-
+        
 #    - name: SSH connection to Actions
 #      uses: P3TERX/debugger-action@master
 
@@ -76,25 +76,25 @@ jobs:
         cd openwrt && make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
     - name: Multi-thread compile
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc)
-
+        
     - name: Single-thread compile
       if: failure()
       run: |
         cd openwrt
         make -j1 V=s
-
-#    - name: Upload bin directory
-#      uses: actions/upload-artifact@master
-#      if: always()
-#      with:
-#        name: OpenWrt_bin
-#        path: openwrt/bin
+        
+    - name: Upload bin directory
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: OpenWrt_bin
+        path: openwrt/bin
 
     - name: Organize files
       if: always()
@@ -102,7 +102,7 @@ jobs:
         cd openwrt/bin/targets/ramips/mt7621/
         rm -rf packages
         echo "::set-env name=FIRMWARE::$(pwd)"
-
+        
     - name: Upload firmware
       uses: actions/upload-artifact@master
       if: always()
