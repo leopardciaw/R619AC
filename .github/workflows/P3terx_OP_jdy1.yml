@@ -6,14 +6,14 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P18-5
+name: P3TERX_JDY1
 
 on:
-#   release:
-#     types: [published]
-   push:
-     branches:
-       - master
+   release:
+     types: [published]
+#   push:
+#     branches:
+#       - master
 #     paths:
 #       - 'k2p.config'
 #  schedule:
