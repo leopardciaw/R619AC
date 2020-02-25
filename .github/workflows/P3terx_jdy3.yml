@@ -6,16 +6,16 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_JDY-1
+name: P3TERX_JDY-3
 
 on:
-   release:
-     types: [published]
-#   push:
-#     branches:
-#       - master
+#   release:
+#     types: [published]
+   push:
+     branches:
+       - master
 #     paths:
-#       - 'jdy.config'
+#       - 'jdy3.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -60,7 +60,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: 'jdy.config'
+        CONFIG_FILE: 'jdy3.config'
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
