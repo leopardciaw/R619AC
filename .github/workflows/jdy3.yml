@@ -9,11 +9,11 @@
 name: Build OpenWrt JDY3
 
 on:
-#  release:
-#    types: [published]
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
+#  push:
+#    branches:
+#      - master
 #    paths:
 #      - '.config'
 #  schedule:
