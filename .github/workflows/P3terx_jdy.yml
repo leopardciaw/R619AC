@@ -11,12 +11,13 @@ name: P3TERX_JDY-2
 on:
 #   release:
 #     types: [published]
-   push:
-     branches:
-       - master
+#   push:
+#     branches:
+#       - master
 #     paths:
 #       - 'jdy.config'
-#  schedule:
+  schedule:
+    - cron: 45 3 * * 3
 #    - cron: 0 8 * * 5
 #  watch:
 #    types: [started]
