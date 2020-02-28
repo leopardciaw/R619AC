@@ -9,13 +9,13 @@
 name: Build OpenWrt JDY1
 
 on:
-#  release:
-#    types: [published]
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
+#  push:
+#    branches:
+#      - master
 #    paths:
-#      - '.config'
+#      - 'jdy.config'
 #  schedule:
 #     - cron: 50 7 * * 3
 #    - cron: 25 2 * * 3

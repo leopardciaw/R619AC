@@ -3,21 +3,21 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
-# Blog: https://p3terx.com
+# Blog: https://p3terx.com、false
 #=================================================
 
-name: Build OpenWrt JDY3
+name: OpenWrt P2W_28
 
 on:
-  release:
-    types: [published]
-#  push:
-#    branches:
-#      - master
+#  release:
+#    types: [published]
+  push:
+    branches:
+      - master
 #    paths:
-#      - '.config'
+#      - 'jdy.config'
 #  schedule:
-#     - cron: 0 8 * * 3
+#     - cron: '52 2 * * 3'
 #    - cron: 25 2 * * 3
 #    - cron: 0 8 */3 * *
 #  watch:
@@ -26,9 +26,9 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: jdy3.config
+  CONFIG_FILE: jdy.config
   DIY_SH: diy.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
