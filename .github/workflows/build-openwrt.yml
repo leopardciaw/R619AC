@@ -3,23 +3,21 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
-# Blog: https://p3terx.com、false
+# Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt P2W_28
+name: Build OpenWrt R619AC
 
 on:
-#  release:
-#    types: [published]
-  push:
-    branches:
-      - master
+  release:
+    types: published
+#  push:
+#    branches:
+#      - master
 #    paths:
 #      - 'jdy.config'
 #  schedule:
-#     - cron: '52 2 * * 3'
-#    - cron: 25 2 * * 3
-#    - cron: 0 8 */3 * *
+#    - cron: 20 5 * * *
 #  watch:
 #    types: started
 
@@ -28,8 +26,8 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: jdy.config
   DIY_SH: diy.sh
-  SSH_ACTIONS: true
-  UPLOAD_BIN_DIR: true
+  SSH_ACTIONS: false
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -50,7 +48,7 @@ jobs:
         sudo swapoff /swapfile
         sudo rm -rf /swapfile /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib
+        sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
@@ -71,7 +69,6 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         ../$DIY_SH
-        make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
@@ -121,6 +118,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: env.UPLOAD_RELEASE == 'true' && startsWith(github.ref, 'refs/tags/')
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RAC_TOKEN }}
       with:
         files: ${{ env.FIRMWARE }}/*

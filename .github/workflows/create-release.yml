@@ -1,0 +1,33 @@
+#=================================================
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
+
+name: Create release
+
+on:
+  schedule:
+    - cron: 40 8 * * *
+#  watch:
+#    types: started
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Generate tag
+      run: |
+        echo ::set-env name=RELEASE_TAG::"$(TZ=UTC-8 date +"%Y.%m.%d")"
+
+    - name: Create release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RAC_TOKEN }}
+      with:
+        tag_name: ${{ env.RELEASE_TAG }}
+        body: 🚀 Automated build | 自动编译
