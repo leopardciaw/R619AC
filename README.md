@@ -1,7 +1,11 @@
-来源
-https://github.com/P3TERX/OpenWrt-Newifi_D2
-# OpenWrt firmware for Newifi D2
+# OpenWrt firmware for P2W R619AC
 
-Auto build OpenWrt firmware for Newifi D2 via GitHub Actions
+https://github.com/P3TERX/Actions-OpenWrt/
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/leopardciaw/D2?style=for-the-badge&label=Download)](https://github.com/leopardciaw/D2/releases/latest)
+https://github.com/coolsnowwolf/lede
+
+
+Auto build OpenWrt firmware for P2W R619AC via GitHub Actions
+
+# 最新版下载&Download
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/leopardciaw/R619AC?style=for-the-badge&label=Download)](https://github.com/leopardciaw/R619AC/releases/latest)
