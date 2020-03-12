@@ -9,3 +9,7 @@ Auto build OpenWrt firmware for P2W R619AC via GitHub Actions
 
 # 最新版下载&Download
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/leopardciaw/R619AC?style=for-the-badge&label=Download)](https://github.com/leopardciaw/R619AC/releases/latest)
+
+
+已发布&Release
+https://github.com/leopardciaw/R619AC/releases
