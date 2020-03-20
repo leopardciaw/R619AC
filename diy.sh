@@ -28,7 +28,7 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/lu
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 #增加koolddns
-git clone https://github.com/xrouterservice/luci-app-koolddns.git openwrt/package/lean/luci-app-koolddns
+# git clone https://github.com/xrouterservice/luci-app-koolddns.git openwrt/package/lean/luci-app-koolddns
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
