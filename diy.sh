@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 # Modify default IP@sed '1,3s/my/your/g
-sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
 
 # 删除原主题包
 # rm -rf package/lean/luci-theme-argon
