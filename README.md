@@ -1,11 +1,13 @@
 # OpenWrt firmware for P2W R619AC
+固件采用GitHub Actions不定时自动云编译。
+Auto build OpenWrt firmware for P2W R619AC via GitHub Actions
+
+# 致谢大佬&Thanks
 
 https://github.com/P3TERX/Actions-OpenWrt/
-
 https://github.com/coolsnowwolf/lede
+.....
 
-
-Auto build OpenWrt firmware for P2W R619AC via GitHub Actions
 
 # 最新版下载&Download Latest
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/leopardciaw/R619AC?style=for-the-badge&label=Download)](https://github.com/leopardciaw/R619AC/releases/latest)
@@ -13,3 +15,9 @@ Auto build OpenWrt firmware for P2W R619AC via GitHub Actions
 
 [所有已发布 & All Release](https://github.com/leopardciaw/R619AC/releases)
 
+# 请注意
+1.集成的插件只是自己需要用到的，请多多包涵。
+2.源码来自https://github.com/coolsnowwolf/lede，
+除了增减插件和主题、修改管理IP外，未做其他修改，有问题请直接到
+https://github.com/coolsnowwolf/lede/issues这里提交issue，提交issues请注意基本的礼仪和格式，翻看之前是否有大佬已提出相关issue。
+3.才疏学浅、时间有限，回答不了任何技术问题哈，只是定时或不定时更新下大雕的源码编译。
