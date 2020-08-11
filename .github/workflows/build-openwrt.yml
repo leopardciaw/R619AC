@@ -25,7 +25,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: jdy.config
   DIY_SH: diy.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
