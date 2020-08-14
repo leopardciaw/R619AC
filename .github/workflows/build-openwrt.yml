@@ -10,9 +10,9 @@ name: Build OpenWrt R619AC
 on:
   release:
     types: published
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
 #    paths:
 #      - 'jdy.config'
 #  schedule:
