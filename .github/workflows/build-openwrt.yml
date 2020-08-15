@@ -18,7 +18,7 @@ on:
 #    paths:
 #      - 'jdy.config'
   schedule:
-    - cron: 40 15 * * *
+    - cron: 30 16 * * *
 #          分 时 日 月 周5
 #   - cron: 0 8 */3 * *
 #  watch:
@@ -34,7 +34,7 @@ env:
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
+  UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
