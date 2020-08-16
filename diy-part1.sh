@@ -9,7 +9,7 @@
 # ACRH17 KERNEL 5.4
 #=============================================================
 
-# fw876/helloworld
+# Add fw876/helloworld
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source

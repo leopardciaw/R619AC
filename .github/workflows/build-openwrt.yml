@@ -18,7 +18,7 @@ on:
 #    paths:
 #      - 'jdy.config'
   schedule:
-    - cron: 30 16 * * *
+    - cron: 55 2 * * *
 #          分 时 日 月 周5
 #   - cron: 0 8 */3 * *
 #  watch:
@@ -28,14 +28,14 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: jdy.config
+  CONFIG_FILE: r619ac.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: false
+  UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
@@ -52,7 +52,8 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /etc/mysql /etc/php
+        sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
         sudo -E apt-get -qq autoremove --purge
@@ -173,6 +174,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RAC_TOKEN }}
       with:
         tag_name: ${{ env.RELEASE_TAG }}
-        body: 🚀 Automated build | 自动编译
+        body: 🚀 GitHub Automated Build | 自动编译
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
