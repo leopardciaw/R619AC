@@ -47,7 +47,7 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/lu
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 
 # 获取luci-app-adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/diy-packages/luci-app-adguardhome
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome package/diy-packages/luci-app-adguardhome
 
 #获取Lienol-xiaorouji-package
 #git clone https://github.com/xiaorouji/openwrt-package/lienol/ package/diy-packages/lienol
