@@ -15,3 +15,4 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # 增加源
 # sed -i '$a src-git lienol https://github.com/xiaorouji/openwrt-package' feeds.conf.default
 
+# git clone https://github.com/kenzok8/small.git
