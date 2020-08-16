@@ -12,11 +12,11 @@ on:
   repository_dispatch:
   release:
     types: published
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 #    paths:
-#      - 'jdy.config'
+#      - 'r619ac.config'
   schedule:
     - cron: 55 2 * * *
 #          分 时 日 月 周5
