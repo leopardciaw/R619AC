@@ -18,7 +18,7 @@ on:
 #    paths:
 #      - 'r619ac.config'
   schedule:
-    - cron: 40 7 * * *
+    - cron: 30 3 */20 * *
 #          分 时 日 月 周5
 #   - cron: 0 8 */3 * *
 #  watch:
