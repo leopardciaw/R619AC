@@ -12,7 +12,7 @@
 sed -i 's/KERNEL_PATCHVER:=4.19/KERNEL_PATCHVER:=5.4/g' target/linux/ipq40xx/Makefile
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.7.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.110.1/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
 sed -i 's/OpenWrt/R619ac/g' package/base-files/files/bin/config_generate
