@@ -17,12 +17,12 @@ on:
 #      - master
 #    paths:
 #      - 'r619ac.config'
-  schedule:
-    - cron: 30 3 */10 * *
+#  schedule:
+#    - cron: 30 3 */10 * *
 #          分 时 日 月 周5
 #   - cron: 0 8 */3 * *
-#  watch:
-#    types: started
+  watch:
+    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
