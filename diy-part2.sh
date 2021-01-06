@@ -10,6 +10,7 @@
 # sed -i '93s/0xf60000/0x1fb0000/g' target/
 #=================================================
 # Modify default IP
+# sed -i 's/15744/32448/g'
 sed -i 's/192.168.1.1/192.168.5.200/g' package/base-files/files/bin/config_generate
 
 # Modify hostname

@@ -6,6 +6,7 @@
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
@@ -21,7 +22,7 @@ on:
 #    paths:
 #      - 'r619ac.config'
   schedule:
-    - cron: 30 3 * * /5
+    - cron: 20 14 * * /5
 #          分 时 日 月 周5
 #   - cron: 0 8 */3 * *
 #  watch:
@@ -92,7 +93,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: tete1030/safe-debugger-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
@@ -181,9 +182,9 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: ActionsRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 20
         keep_minimum_runs: 5
 
     - name: Remove old Releases
@@ -193,4 +194,4 @@ jobs:
         keep_latest: 8
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RAC_TOKEN }}
