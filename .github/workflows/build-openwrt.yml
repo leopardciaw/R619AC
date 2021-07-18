@@ -22,9 +22,9 @@ on:
 #    paths:
 #      - 'r619ac.config'
   schedule:
-    - cron: 20 4 */12 * *
+    - cron: 0 12 * * *
 #          分 时 日 月 周5
-#   - cron: 0 8 */3 * *
+#   - cron: 0 8 */15 * *
 #  watch:
 #    types: started
 
@@ -35,8 +35,8 @@ env:
   CONFIG_FILE: r619ac.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
+  SSH_ACTIONS: true
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: true
