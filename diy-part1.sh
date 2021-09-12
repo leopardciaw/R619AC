@@ -20,8 +20,9 @@
 git clone https://github.com/kenzok8/openwrt-packages.git package/diy-packages
 git clone https://github.com/kenzok8/small.git package/small
 
-
-
-# 增加ssr
+# 增加ssr（上述kenzok8/openwrt-packages已包含）
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-# git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
+# git clone https://github.com/fw876/helloworld.git package/diy-packages/luci-app-ssr-plus
+
+#  增加luci-app-unblockneteasemusic，来源immortalwrt
+git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/diy-packages
