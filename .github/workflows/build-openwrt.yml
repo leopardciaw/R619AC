@@ -22,7 +22,7 @@ on:
 #    paths:
 #      - 'r619ac.config'
   schedule:
-    - cron: 0 3 * * *
+    - cron: 10 14 * * *
 #          分 时 日 月 周5
 #   - cron: 0 8 */15 * *
 #  watch:
@@ -45,7 +45,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout
