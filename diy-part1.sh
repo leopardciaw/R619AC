@@ -26,3 +26,6 @@ git clone https://github.com/kenzok8/small.git package/small
 
 #  增加luci-app-unblockneteasemusic，来源immortalwrt
 git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+
+# CONFIG_PACKAGE_luci-app-filebrowser=y
+git clone https://github.com/immortalwrt/openwrt-filebrowser.git package/luci-app-filebrowser
