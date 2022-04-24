@@ -19,6 +19,7 @@
 # git clone https://github.com/xiaorouji/openwrt-package/tree/master/lienol/luci-app-passwall package/luci-app-passwall
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small.git package/small
+git clone https://github.com/open-mesh-mirror/batman-adv.git package/batman-adv
 
 # 增加ssr（上述kenzok8/openwrt-packages已包含）
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
