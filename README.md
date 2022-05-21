@@ -29,3 +29,4 @@ https://github.com/kenzok8/openwrt-packages
 https://github.com/coolsnowwolf/lede/issues 这里提交issue，提交issues请注意基本的礼仪和格式，翻看之前是否有大佬已提出相关issue。  
 3.才疏学浅、时间有限，回答不了任何技术问题哈，只是定时或不定时更新下大雕的源码编译。  
 4.若需要上传至releases，需要自行设置并修改GITHUB_TOKEN: ${{ secrets.LEO_TOKEN }}等地方，当中的LEO_TOKEN。否则只能在Actions里查看和下载编译的固件。  
+5.自用固件，仅供参考。管理地址：192.168.5.210，密码：password
