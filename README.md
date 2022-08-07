@@ -23,7 +23,7 @@ https://github.com/kenzok8/openwrt-packages
 [所有已发布 & All Release](https://github.com/leopardciaw/R619AC/releases)
 
 # 请注意
-1.集成的插件只是自己需要用到的，请多多包涵。  
+1.集成的插件只是常用到的，未能全部测试插件的可用性，请多多包涵。  
 2.源码来自https://github.com/coolsnowwolf/lede，
 除了增减插件和主题、修改管理IP外，未做其他修改，有问题请直接到
 https://github.com/coolsnowwolf/lede/issues 这里提交issue，提交issues请注意基本的礼仪和格式，翻看之前是否有大佬已提出相关issue。  
