@@ -8,6 +8,8 @@
 # Blog: https://p3terx.com
 # sed '1,3s/my/your/g'
 # sed -i '93s/0xf60000/0x1fb0000/g' target/
+# chmod -R 755 files
+
 #=================================================
 # Modify default IP
 # sed -i 's/15744/32448/g'
